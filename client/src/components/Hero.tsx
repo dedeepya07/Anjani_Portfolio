@@ -36,9 +36,9 @@ export default function Hero() {
     },
   };
 
-  // Function to view CV in a new tab
+  // Function to view CV in a new tab from Google Drive
   const viewCurriculumVitae = () => {
-    window.open("/attached_assets/CV_Anjani.pdf", '_blank');
+    window.open("https://drive.google.com/file/d/1CGfqlpzzdNBEXehO8XYSgvUhS4r5jgM9/view?usp=share_link", '_blank');
   };
 
   return (
