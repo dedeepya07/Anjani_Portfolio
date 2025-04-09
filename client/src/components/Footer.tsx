@@ -106,9 +106,6 @@ export default function Footer() {
         
         <div className="mt-12 pt-8 border-t text-center text-muted-foreground">
           <p>© {currentYear} Anjani Dedeepya Siripurapu. All Rights Reserved.</p>
-          <p className="mt-2 text-sm">
-            Designed and built with <span className="text-red-500">❤</span> using React, Tailwind CSS, and Framer Motion
-          </p>
         </div>
       </div>
     </footer>
