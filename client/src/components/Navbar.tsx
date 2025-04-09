@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import ThemeToggle from "./ThemeToggle";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { useSection } from "@/hooks/use-section";
 
 const navLinks = [
   { name: "Home", href: "#home" },
@@ -18,6 +19,7 @@ const navLinks = [
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { activeSection } = useSection();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,12 +44,16 @@ export default function Navbar() {
     <motion.header
       className={`fixed top-0 w-full z-50 py-4 px-6 transition-all duration-300 ${
         isScrolled 
-          ? "bg-background/80 backdrop-blur-md shadow-sm" 
+          ? "bg-background/80 backdrop-blur-md shadow-sm border-b border-primary/10" 
           : "bg-transparent"
       }`}
       initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
+      animate={{ 
+        y: 0,
+        height: isScrolled ? "auto" : "5rem",
+        padding: isScrolled ? "0.5rem 1.5rem" : "1rem 1.5rem" 
+      }}
+      transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <motion.a 
@@ -73,13 +79,25 @@ export default function Navbar() {
               >
                 <a
                   href={link.href}
-                  className="text-foreground hover:text-primary transition-colors"
+                  className={`relative text-foreground hover:text-primary transition-colors px-1 py-2 ${
+                    activeSection === link.href.substring(1) 
+                      ? "text-primary font-medium" 
+                      : ""
+                  }`}
                   onClick={(e) => {
                     e.preventDefault();
                     handleScrollToSection(link.href);
                   }}
                 >
                   {link.name}
+                  {activeSection === link.href.substring(1) && (
+                    <motion.span 
+                      className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary rounded-full"
+                      layoutId="activeSection"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                    />
+                  )}
                 </a>
               </motion.li>
             ))}
@@ -122,13 +140,25 @@ export default function Navbar() {
                 >
                   <a
                     href={link.href}
-                    className="block py-2 text-foreground hover:text-primary transition-colors"
+                    className={`relative block py-2 transition-colors ${
+                      activeSection === link.href.substring(1)
+                        ? "text-primary font-medium"
+                        : "text-foreground hover:text-primary"
+                    }`}
                     onClick={(e) => {
                       e.preventDefault();
                       handleScrollToSection(link.href);
                     }}
                   >
-                    {link.name}
+                    <div className="flex items-center">
+                      {activeSection === link.href.substring(1) && (
+                        <motion.div 
+                          layoutId="activeMobileSection"
+                          className="w-1 h-6 bg-primary rounded-full mr-2"
+                        />
+                      )}
+                      {link.name}
+                    </div>
                   </a>
                 </motion.li>
               ))}
