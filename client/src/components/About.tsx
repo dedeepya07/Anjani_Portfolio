@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 import { useRef } from "react";
+import aiDataScienceImg from "@/assets/ai_data_science.svg";
 
 export default function About() {
   const ref = useRef<HTMLElement>(null);
@@ -58,8 +59,8 @@ export default function About() {
               transition={{ duration: 12, repeat: Infinity }}
             />
             <img 
-              src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?q=80&w=1770&auto=format&fit=crop" 
-              alt="Anjani working on data science project" 
+              src={aiDataScienceImg} 
+              alt="Data Science, AI and Machine Learning visualization" 
               className="rounded-lg shadow-xl z-10 relative"
             />
           </motion.div>
