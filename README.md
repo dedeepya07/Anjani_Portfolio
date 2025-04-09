@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Anjani's Portfolio
 
 A professional portfolio website showcasing skills, projects, achievements, and professional journey.
