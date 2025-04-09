@@ -20,8 +20,8 @@ export default function Footer() {
               Portfolio
             </motion.a>
             <p className="text-muted-foreground max-w-md">
-              A passionate full-stack developer and UI/UX designer with a focus on creating elegant,
-              functional, and user-centered digital experiences.
+              A passionate Computer Science and Data Science student with a focus on creating innovative
+              solutions using machine learning, data analysis, and modern web technologies.
             </p>
             
             <div className="mt-6 flex gap-4">
@@ -84,32 +84,28 @@ export default function Footer() {
             <ul className="space-y-2 text-muted-foreground">
               <li className="flex items-center gap-2">
                 <i className="fas fa-map-marker-alt"></i>
-                <span>San Francisco, California</span>
+                <span>Visakhapatnam, Andhra Pradesh, India</span>
               </li>
               <li className="flex items-center gap-2">
                 <i className="fas fa-envelope"></i>
-                <a href="mailto:alex@example.com" className="hover:text-primary transition-colors">
-                  alex@example.com
+                <a href="mailto:siripurapuanjani@gmail.com" className="hover:text-primary transition-colors">
+                  siripurapuanjani@gmail.com
                 </a>
               </li>
               <li className="flex items-center gap-2">
-                <i className="fas fa-phone"></i>
-                <a href="tel:+14155552671" className="hover:text-primary transition-colors">
-                  +1 (415) 555-2671
-                </a>
+                <i className="fas fa-school"></i>
+                <span>NSRIT, Visakhapatnam</span>
               </li>
               <li className="flex items-center gap-2">
-                <i className="fas fa-globe"></i>
-                <a href="https://alexjohnson.dev" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
-                  alexjohnson.dev
-                </a>
+                <i className="fas fa-graduation-cap"></i>
+                <span>B.Tech CSE (Data Science)</span>
               </li>
             </ul>
           </div>
         </div>
         
         <div className="mt-12 pt-8 border-t text-center text-muted-foreground">
-          <p>© {currentYear} Alex Johnson. All Rights Reserved.</p>
+          <p>© {currentYear} Anjani Dedeepya Siripurapu. All Rights Reserved.</p>
           <p className="mt-2 text-sm">
             Designed and built with <span className="text-red-500">❤</span> using React, Tailwind CSS, and Framer Motion
           </p>

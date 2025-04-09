@@ -122,8 +122,8 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="font-medium">Email</h4>
-                  <a href="mailto:alex@example.com" className="text-muted-foreground hover:text-primary transition-colors">
-                    alex@example.com
+                  <a href="mailto:siripurapuanjani@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
+                    siripurapuanjani@gmail.com
                   </a>
                 </div>
               </motion.div>
@@ -137,8 +137,8 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="font-medium">Phone</h4>
-                  <a href="tel:+14155552671" className="text-muted-foreground hover:text-primary transition-colors">
-                    +1 (415) 555-2671
+                  <a href="tel:+917012345678" className="text-muted-foreground hover:text-primary transition-colors">
+                    Contact via email
                   </a>
                 </div>
               </motion.div>
@@ -153,7 +153,7 @@ export default function Contact() {
                 <div>
                   <h4 className="font-medium">Location</h4>
                   <p className="text-muted-foreground">
-                    San Francisco, California, USA
+                    Visakhapatnam, Andhra Pradesh, India
                   </p>
                 </div>
               </motion.div>

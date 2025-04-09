@@ -1,10 +1,11 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { useRef } from "react";
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, FileUp } from "lucide-react";
 
 export default function Hero() {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   const scrollToNext = () => {
     const nextSection = document.getElementById("about");
@@ -35,6 +36,18 @@ export default function Hero() {
     },
   };
 
+  const handleFileUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
+    // This is a placeholder function that would handle CV uploads
+    // In a real implementation, this would process the file and extract information
+    const file = event.target.files?.[0];
+    if (file) {
+      console.log("File selected:", file.name);
+      // Here you would add code to extract data from the CV
+      // For now, we'll just show a notification
+      alert("CV uploaded! In a full implementation, this would extract your information.");
+    }
+  };
+
   return (
     <section 
       id="home" 
@@ -51,7 +64,7 @@ export default function Hero() {
       >
         <motion.div className="mb-6 inline-block" variants={itemVariants}>
           <img 
-            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d" 
+            src="https://images.unsplash.com/photo-1534751516642-a1af1ef26a56?q=80&w=1889&auto=format&fit=crop" 
             alt="Professional headshot" 
             className="rounded-full w-32 h-32 md:w-40 md:h-40 object-cover mx-auto border-4 border-primary/20"
           />
@@ -62,17 +75,17 @@ export default function Hero() {
           variants={itemVariants}
         >
           <span className="text-primary">Hello, I'm </span>
-          <span className="block md:inline">Alex Johnson</span>
+          <span className="block md:inline">Anjani Dedeepya</span>
         </motion.h1>
         
         <motion.p 
           className="text-xl md:text-2xl mb-8 text-muted-foreground"
           variants={itemVariants}
         >
-          Full Stack Developer & UI/UX Designer
+          Computer Science & Data Science Student
         </motion.p>
         
-        <motion.div className="space-x-4" variants={itemVariants}>
+        <motion.div className="space-y-4 md:space-y-0 md:space-x-4 flex flex-col md:flex-row justify-center" variants={itemVariants}>
           <Button 
             size="lg" 
             className="rounded-full px-8"
@@ -95,6 +108,25 @@ export default function Hero() {
             }}
           >
             Contact Me
+          </Button>
+
+          <input
+            type="file"
+            ref={fileInputRef}
+            onChange={handleFileUpload}
+            accept=".pdf,.doc,.docx"
+            className="hidden"
+            id="cv-upload"
+          />
+          
+          <Button 
+            size="lg" 
+            variant="secondary" 
+            className="rounded-full px-8"
+            onClick={() => fileInputRef.current?.click()}
+          >
+            <FileUp className="mr-2 h-4 w-4" />
+            Upload CV
           </Button>
         </motion.div>
       </motion.div>

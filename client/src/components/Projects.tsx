@@ -6,7 +6,7 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Github } from "lucide-react";
 
-type ProjectCategory = "all" | "web" | "mobile" | "design" | "ui/ux";
+type ProjectCategory = "all" | "ml" | "web" | "data" | "nlp" | "iot";
 
 interface Project {
   id: number;
@@ -22,61 +22,71 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    title: "E-Learning Platform",
-    description: "A comprehensive learning management system with interactive courses, quizzes, and progress tracking.",
-    category: ["web", "ui/ux"],
-    image: "https://images.unsplash.com/photo-1610563166150-b34df4f3bcd6",
-    tags: ["React", "Node.js", "MongoDB", "Express"],
+    title: "Brain Stroke Prediction",
+    description: "A machine learning model that predicts brain stroke risks using parameters like age, sex, BMI, and blood sugar, with an interactive web interface for personalized health recommendations.",
+    category: ["ml", "web", "data"],
+    image: "https://images.unsplash.com/photo-1563089145-599997674d42?q=80&w=2070&auto=format&fit=crop",
+    tags: ["Python", "Random Forest", "XGBoost", "Flask"],
     githubUrl: "https://github.com",
     liveUrl: "https://example.com",
   },
   {
     id: 2,
-    title: "Fitness Tracker App",
-    description: "Mobile application for tracking workouts, nutrition, and personal health metrics.",
-    category: ["mobile", "design"],
-    image: "https://images.unsplash.com/photo-1589592345426-b9e0839ff5c3",
-    tags: ["React Native", "Firebase", "Redux", "HealthKit"],
+    title: "INSAAF Legal Framework",
+    description: "An AI-driven legal platform automating various legal procedures with a chatbot for user assistance. Features e-filing, case status tracking, and blockchain technology for data security.",
+    category: ["nlp", "web"],
+    image: "https://images.unsplash.com/photo-1589578527966-fdac0f44566c?q=80&w=1974&auto=format&fit=crop",
+    tags: ["AI", "Blockchain", "React", "NLP"],
     githubUrl: "https://github.com",
     liveUrl: "https://example.com",
   },
   {
     id: 3,
-    title: "Financial Dashboard",
-    description: "Interactive dashboard for visualizing financial data and investment portfolio performance.",
-    category: ["web", "design"],
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
-    tags: ["Vue.js", "D3.js", "TypeScript", "AWS"],
+    title: "POSTFIX",
+    description: "NLP-based application that addresses incomplete delivery and missing address details. Uses NLTK for parsing and resolving address-related issues in real-time to enhance logistics efficiency.",
+    category: ["nlp", "data"],
+    image: "https://images.unsplash.com/photo-1617575408723-aec51ae36b1d?q=80&w=1964&auto=format&fit=crop",
+    tags: ["NLP", "NLTK", "Python", "Geocoding"],
     githubUrl: "https://github.com",
     liveUrl: "https://example.com",
   },
   {
     id: 4,
-    title: "Social Media Analytics",
-    description: "Tool for businesses to track and analyze their social media performance across platforms.",
-    category: ["web", "ui/ux"],
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
-    tags: ["Angular", "Chart.js", "Node.js", "PostgreSQL"],
+    title: "NAV Analysis",
+    description: "A financial analysis system that updates stock market data daily, displays trends using line graphs, and ranks funds based on Sharpe Ratio and NAV. Includes a SIP calculator for investment planning.",
+    category: ["data", "web"],
+    image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=2070&auto=format&fit=crop",
+    tags: ["Data Analysis", "Financial Modeling", "Visualization", "React"],
     githubUrl: "https://github.com",
     liveUrl: "https://example.com",
   },
   {
     id: 5,
-    title: "AR Shopping Experience",
-    description: "Augmented reality application allowing users to visualize products in their space before purchasing.",
-    category: ["mobile", "design"],
-    image: "https://images.unsplash.com/photo-1535223289827-42f1e9919769",
-    tags: ["Swift", "ARKit", "SceneKit", "CoreML"],
+    title: "Smart City IoT Project",
+    description: "An innovative IoT system featuring automated smart street lights, solar-powered EV charging stations, GPS-based bus tracking, and stormwater detection to alert authorities during high water levels.",
+    category: ["iot", "data"],
+    image: "https://images.unsplash.com/photo-1638272181967-7d3772a91265?q=80&w=2070&auto=format&fit=crop",
+    tags: ["IoT", "Solar Energy", "GPS", "Sensors"],
     githubUrl: "https://github.com",
     liveUrl: "https://example.com",
   },
   {
     id: 6,
-    title: "Task Management System",
-    description: "Collaborative platform for teams to organize projects, assign tasks, and track progress.",
-    category: ["web", "ui/ux"],
-    image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b",
-    tags: ["React", "GraphQL", "Apollo", "MongoDB"],
+    title: "Mental Health Prediction",
+    description: "A mental health assessment tool utilizing the DASS-42 questionnaire to identify risk factors and predict potential issues. Features a user-friendly interface providing personalized suggestions.",
+    category: ["ml", "data", "web"],
+    image: "https://images.unsplash.com/photo-1582719471384-894fbb16e074?q=80&w=2187&auto=format&fit=crop",
+    tags: ["Machine Learning", "Psychology", "Data Analysis", "Web App"],
+    githubUrl: "https://github.com",
+    liveUrl: "https://example.com",
+  },
+  {
+    id: 7,
+    title: "WISER: Women's Health Screening",
+    description: "A women's health tool leveraging health indicators to assess early menopause risk. Uses unsupervised learning with Hierarchical Clustering and Gaussian Mixture Models for 95% accuracy in risk profiling.",
+    category: ["ml", "data"],
+    image: "https://images.unsplash.com/photo-1631815587646-b85a1bb027e3?q=80&w=2069&auto=format&fit=crop",
+    tags: ["Unsupervised Learning", "Healthcare", "GMM", "Visualization"],
     githubUrl: "https://github.com",
     liveUrl: "https://example.com",
   },
@@ -125,8 +135,8 @@ export default function Projects() {
             <span className="absolute -bottom-3 left-0 right-0 h-1 bg-primary rounded-full"></span>
           </h2>
           <p className="text-muted-foreground mt-6 max-w-2xl mx-auto">
-            Explore my portfolio of projects spanning web development, mobile applications, and UI/UX design.
-            Each project represents a unique challenge and solution.
+            Explore my portfolio showcasing innovative projects in machine learning, data science, NLP, and IoT.
+            Each project demonstrates my technical skills and passion for solving real-world problems.
           </p>
         </motion.div>
 
@@ -136,7 +146,7 @@ export default function Projects() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          {["all", "web", "mobile", "design", "ui/ux"].map((category) => (
+          {["all", "ml", "web", "data", "nlp", "iot"].map((category) => (
             <Button
               key={category}
               variant={filter === category ? "default" : "outline"}

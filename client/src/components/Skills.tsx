@@ -16,30 +16,30 @@ interface SkillCategory {
 
 const skillCategories: SkillCategory[] = [
   {
-    title: "Frontend",
+    title: "Programming Languages",
     skills: [
-      { name: "React", level: 90, color: "bg-blue-500" },
-      { name: "TypeScript", level: 85, color: "bg-blue-600" },
-      { name: "HTML/CSS", level: 95, color: "bg-orange-500" },
-      { name: "Vue.js", level: 75, color: "bg-green-500" },
+      { name: "Python", level: 92, color: "bg-blue-500" },
+      { name: "JavaScript", level: 85, color: "bg-yellow-500" },
+      { name: "Java", level: 80, color: "bg-orange-600" },
+      { name: "C Programming", level: 88, color: "bg-blue-700" },
     ],
   },
   {
-    title: "Backend",
+    title: "Data Science & ML",
     skills: [
-      { name: "Node.js", level: 87, color: "bg-green-600" },
-      { name: "Express", level: 88, color: "bg-yellow-600" },
-      { name: "MongoDB", level: 82, color: "bg-green-500" },
-      { name: "PostgreSQL", level: 78, color: "bg-blue-700" },
+      { name: "Machine Learning", level: 90, color: "bg-green-600" },
+      { name: "Data Analysis", level: 87, color: "bg-purple-600" },
+      { name: "Natural Language Processing", level: 85, color: "bg-pink-500" },
+      { name: "Deep Learning", level: 82, color: "bg-indigo-600" },
     ],
   },
   {
-    title: "Tools & Others",
+    title: "Web Development",
     skills: [
-      { name: "Git/GitHub", level: 92, color: "bg-purple-600" },
-      { name: "Docker", level: 75, color: "bg-blue-600" },
-      { name: "AWS", level: 70, color: "bg-yellow-500" },
-      { name: "UI/UX Design", level: 85, color: "bg-pink-500" },
+      { name: "HTML/CSS", level: 88, color: "bg-orange-500" },
+      { name: "React.js", level: 85, color: "bg-blue-400" },
+      { name: "Node.js", level: 80, color: "bg-green-500" },
+      { name: "Flask/Django", level: 85, color: "bg-red-600" },
     ],
   },
 ];
@@ -132,8 +132,8 @@ export default function Skills() {
           <h3 className="text-xl font-semibold mb-8 text-center">Additional Competencies</h3>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
             {[
-              "Jest", "GraphQL", "Redux", "Sass", "Webpack", "Tailwind CSS", 
-              "Figma", "Next.js", "RESTful APIs", "Agile", "CI/CD", "Firebase"
+              "TensorFlow", "PyTorch", "Scikit-learn", "NLTK", "PostgreSQL", "SQL", 
+              "R Programming", "Power BI", "Git/GitHub", "AWS", "IoT", "RPA"
             ].map((skill) => (
               <motion.div
                 key={skill}

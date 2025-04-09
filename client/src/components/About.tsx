@@ -58,43 +58,43 @@ export default function About() {
               transition={{ duration: 12, repeat: Infinity }}
             />
             <img 
-              src="https://images.unsplash.com/photo-1531482615713-2afd69097998" 
-              alt="Alex working on a project" 
+              src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?q=80&w=1770&auto=format&fit=crop" 
+              alt="Anjani working on data science project" 
               className="rounded-lg shadow-xl z-10 relative"
             />
           </motion.div>
 
           <motion.div variants={itemVariants}>
             <h3 className="text-2xl font-semibold mb-4">
-              I'm Alex, a <span className="text-primary">passionate developer</span> with a creative edge
+              I'm Anjani, a <span className="text-primary">passionate</span> Computer Science student with data science expertise
             </h3>
             <p className="text-muted-foreground mb-6">
-              As a full-stack developer with 5+ years of experience, I've crafted digital solutions 
-              that combine elegant design with powerful functionality. My journey in tech has been 
-              driven by curiosity and a desire to solve real-world problems through code.
+              As a junior undergraduate in Computer Science and Engineering with a specialization in Data Science,
+              I'm dedicated to creating innovative solutions using cutting-edge technologies. I've consistently maintained
+              a strong academic record with a CGPA of 9.0/10.0, earning a place in the top 10% of my department.
             </p>
             <p className="text-muted-foreground mb-6">
-              I specialize in React, Node.js, and modern web technologies, with a keen interest in 
-              creating accessible, responsive, and performant applications. When I'm not coding, 
-              you'll find me hiking, reading sci-fi novels, or experimenting with new technologies.
+              I specialize in Machine Learning, Natural Language Processing, and Web Development, with a keen interest in 
+              creating intelligent systems that solve real-world problems. My diverse project portfolio spans healthcare, 
+              legal tech, finance, and smart city solutions, reflecting my versatility and passion for technology.
             </p>
             
             <div className="grid grid-cols-2 gap-4">
               <div>
                 <h4 className="font-semibold mb-2">Location</h4>
-                <p className="text-muted-foreground">San Francisco, CA</p>
+                <p className="text-muted-foreground">Visakhapatnam, India</p>
               </div>
               <div>
                 <h4 className="font-semibold mb-2">Email</h4>
-                <p className="text-muted-foreground">alex@example.com</p>
+                <p className="text-muted-foreground">siripurapuanjani@gmail.com</p>
               </div>
               <div>
-                <h4 className="font-semibold mb-2">Study</h4>
-                <p className="text-muted-foreground">Stanford University</p>
+                <h4 className="font-semibold mb-2">University</h4>
+                <p className="text-muted-foreground">NSRIT, Visakhapatnam</p>
               </div>
               <div>
                 <h4 className="font-semibold mb-2">Degree</h4>
-                <p className="text-muted-foreground">Computer Science</p>
+                <p className="text-muted-foreground">B.Tech CSE (Data Science)</p>
               </div>
             </div>
           </motion.div>
