@@ -20,36 +20,30 @@ const achievements: Achievement[] = [
   },
   {
     id: 2,
-    title: "Hack with Vizag",
-    description: "Achieved 3rd position in the national-level hackathon 'Hack with Vizag' (NSRIT, Visakhapatnam).",
-    icon: "medal"
+    title: "Hackathon Achievement",
+    description: "Secured 3rd position in the national-level hackathon 'HackToImpact' (GVPCE, Visakhapatnam). Also achieved 3rd place in 'Hack with Vizag' and 2nd place in the ideathon competition on Engineer's Day.",
+    icon: "trophy"
   },
   {
     id: 3,
-    title: "Engineer's Day Ideathon",
-    description: "Won 2nd place in the ideathon competition conducted on Engineer's Day (NSRIT, Visakhapatnam).",
-    icon: "star"
-  },
-  {
-    id: 4,
     title: "Paper Presentation",
     description: "Recognized for exceptional performance in a paper presentation on 'Software Engineering Association Day' (NSRIT, Visakhapatnam).",
     icon: "bookmark"
   },
   {
-    id: 5,
+    id: 4,
     title: "Internal Smart India Hackathon",
     description: "Secured 1st place in the Internal Smart India Hackathon.",
     icon: "crown"
   },
   {
-    id: 6,
+    id: 5,
     title: "Enterprising Bharat",
     description: "Selected among top 20 teams from 500 for mentoring under 'Enterprising Bharat' (sponsored by Grameena Incubation Center).",
     icon: "trophy"
   },
   {
-    id: 7,
+    id: 6,
     title: "Project Expo Winner",
     description: "Won 1st place in Project Expo conducted for 'Technimble 2k25'.",
     icon: "medal"

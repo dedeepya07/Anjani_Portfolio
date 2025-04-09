@@ -39,14 +39,6 @@ const timelineItems: TimelineItem[] = [
   },
   {
     id: 4,
-    title: "Hackathon Achievement",
-    organization: "HackToImpact (GVPCE, Visakhapatnam)",
-    period: "2023",
-    description: "Secured 3rd position in the national-level hackathon 'HackToImpact'. Also achieved 3rd place in 'Hack with Vizag' and 2nd place in the ideathon competition on Engineer's Day.",
-    type: "experience",
-  },
-  {
-    id: 5,
     title: "Indian School Certificate (ISC) - XII",
     organization: "Alwardas Public School, Visakhapatnam",
     period: "2022",
@@ -54,7 +46,7 @@ const timelineItems: TimelineItem[] = [
     type: "education",
   },
   {
-    id: 6,
+    id: 5,
     title: "CBSE - X",
     organization: "Little Angels School, Visakhapatnam",
     period: "2020",
@@ -115,16 +107,19 @@ export default function Timeline() {
           animate={isInView ? "visible" : "hidden"}
         >
           {/* Timeline center line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-muted/70"></div>
+          {/* Timeline center line - hidden on mobile */}
+          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-muted/70 hidden md:block"></div>
+          {/* Timeline left line - visible only on mobile */}
+          <div className="absolute left-[12px] h-full w-0.5 bg-muted/70 md:hidden block"></div>
 
           {timelineItems.map((item, index) => (
             <motion.div 
               key={item.id}
               variants={itemVariants}
-              className={`relative z-10 mb-12 flex ${index % 2 === 0 ? 'flex-row-reverse' : 'flex-row'}`}
+              className={`relative z-10 mb-12 flex ${index % 2 === 0 ? 'md:flex-row-reverse flex-row' : 'flex-row'}`}
             >
-              <div className={`w-1/2 px-6 ${index % 2 === 0 ? 'text-right' : 'text-left'}`}>
-                <div className={`bg-card border rounded-lg p-6 shadow-sm ${index % 2 === 0 ? 'ml-auto' : 'mr-auto'} max-w-md hover:shadow-md transition-shadow`}>
+              <div className={`md:w-1/2 w-full px-2 md:px-6 ${index % 2 === 0 ? 'md:text-right text-left' : 'text-left'}`}>
+                <div className={`bg-card border rounded-lg p-4 md:p-6 shadow-sm ${index % 2 === 0 ? 'md:ml-auto' : 'md:mr-auto'} max-w-md hover:shadow-md transition-shadow`}>
                   <div className="flex items-center gap-2 mb-2">
                     {item.type === "education" ? (
                       <GraduationCap className="h-5 w-5 text-primary" />
@@ -140,8 +135,13 @@ export default function Timeline() {
                 </div>
               </div>
 
-              {/* Center dot */}
-              <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/4 flex items-center justify-center">
+              {/* Center dot - visible on desktop */}
+              <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/4 md:flex hidden items-center justify-center">
+                <div className="w-4 h-4 rounded-full bg-primary"></div>
+              </div>
+              
+              {/* Left dot - visible on mobile */}
+              <div className="absolute left-[12px] transform -translate-x-1/2 top-2 md:hidden flex items-center justify-center">
                 <div className="w-4 h-4 rounded-full bg-primary"></div>
               </div>
             </motion.div>

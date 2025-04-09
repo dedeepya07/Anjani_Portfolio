@@ -6,26 +6,20 @@ import { Moon, Sun } from "lucide-react";
 export default function ThemeToggle() {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
+  // Check theme on component mount
   useEffect(() => {
-    // Check if user has a theme preference in localStorage
-    const storedTheme = localStorage.getItem("theme");
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    
-    if (storedTheme === "dark" || (!storedTheme && prefersDark)) {
-      setIsDarkMode(true);
-      document.documentElement.classList.add("dark");
-    } else {
-      setIsDarkMode(false);
-      document.documentElement.classList.remove("dark");
-    }
+    const isDark = document.documentElement.classList.contains("dark");
+    setIsDarkMode(isDark);
   }, []);
 
   const toggleTheme = () => {
     if (isDarkMode) {
+      // Switch to light mode
       document.documentElement.classList.remove("dark");
       localStorage.setItem("theme", "light");
       setIsDarkMode(false);
     } else {
+      // Switch to dark mode
       document.documentElement.classList.add("dark");
       localStorage.setItem("theme", "dark");
       setIsDarkMode(true);
@@ -41,11 +35,13 @@ export default function ThemeToggle() {
         size="icon" 
         onClick={toggleTheme}
         aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
+        className="relative"
       >
         <motion.div
           initial={false}
           animate={{ rotate: isDarkMode ? 180 : 0 }}
           transition={{ duration: 0.5 }}
+          className="flex items-center justify-center"
         >
           {isDarkMode ? (
             <Moon className="h-5 w-5" />
