@@ -11,19 +11,19 @@ export default function ScrollProgress() {
   });
 
   const { activeSection } = useSection();
-  const [color, setColor] = useState("rgba(74, 222, 212, 0.8)"); // Default color (teal)
+  const [color, setColor] = useState("rgba(0, 122, 255, 0.8)"); // Default color (blue)
 
   // Change color based on active section
   useEffect(() => {
     const sectionColors: Record<string, string> = {
-      home: "rgba(74, 222, 212, 0.8)", // teal
-      about: "rgba(16, 185, 129, 0.8)", // green
-      projects: "rgba(59, 130, 246, 0.8)", // blue
-      skills: "rgba(139, 92, 246, 0.8)", // purple
-      experience: "rgba(236, 72, 153, 0.8)", // pink
-      achievements: "rgba(245, 158, 11, 0.8)", // amber
-      certifications: "rgba(239, 68, 68, 0.8)", // red
-      contact: "rgba(74, 222, 212, 0.8)" // teal
+      home: "rgba(0, 122, 255, 0.8)", // blue
+      about: "rgba(52, 152, 219, 0.8)", // lighter blue
+      projects: "rgba(0, 102, 204, 0.8)", // darker blue
+      skills: "rgba(30, 144, 255, 0.8)", // dodger blue
+      experience: "rgba(65, 105, 225, 0.8)", // royal blue
+      achievements: "rgba(100, 149, 237, 0.8)", // cornflower blue
+      certifications: "rgba(70, 130, 180, 0.8)", // steel blue
+      contact: "rgba(0, 122, 255, 0.8)" // blue
     };
 
     setColor(sectionColors[activeSection] || sectionColors.home);

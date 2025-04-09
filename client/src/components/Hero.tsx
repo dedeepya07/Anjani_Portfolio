@@ -1,12 +1,11 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { useRef } from "react";
-import { ArrowDown, FileUp } from "lucide-react";
+import { ArrowDown, FileDown } from "lucide-react";
 import profileImage from "@/assets/profile.svg";
 
 export default function Hero() {
   const scrollRef = useRef<HTMLDivElement>(null);
-  const fileInputRef = useRef<HTMLInputElement>(null);
 
   const scrollToNext = () => {
     const nextSection = document.getElementById("about");
@@ -37,16 +36,9 @@ export default function Hero() {
     },
   };
 
-  const handleFileUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
-    // This is a placeholder function that would handle CV uploads
-    // In a real implementation, this would process the file and extract information
-    const file = event.target.files?.[0];
-    if (file) {
-      console.log("File selected:", file.name);
-      // Here you would add code to extract data from the CV
-      // For now, we'll just show a notification
-      alert("CV uploaded! In a full implementation, this would extract your information.");
-    }
+  // Function to view CV in a new tab
+  const viewCurriculumVitae = () => {
+    window.open("/attached_assets/CV_Anjani.pdf", '_blank');
   };
 
   return (
@@ -111,23 +103,14 @@ export default function Hero() {
             Contact Me
           </Button>
 
-          <input
-            type="file"
-            ref={fileInputRef}
-            onChange={handleFileUpload}
-            accept=".pdf,.doc,.docx"
-            className="hidden"
-            id="cv-upload"
-          />
-          
           <Button 
             size="lg" 
             variant="secondary" 
             className="rounded-full px-8"
-            onClick={() => fileInputRef.current?.click()}
+            onClick={viewCurriculumVitae}
           >
-            <FileUp className="mr-2 h-4 w-4" />
-            Upload CV
+            <FileDown className="mr-2 h-4 w-4" />
+            View Curriculum Vitae
           </Button>
         </motion.div>
       </motion.div>

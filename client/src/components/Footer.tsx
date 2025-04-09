@@ -26,8 +26,8 @@ export default function Footer() {
             
             <div className="mt-6 flex gap-4">
               {[
-                { icon: "fab fa-github", href: "https://github.com", name: "GitHub" },
-                { icon: "fab fa-linkedin", href: "https://linkedin.com", name: "LinkedIn" },
+                { icon: "fab fa-github", href: "https://github.com/dedeepya07", name: "GitHub" },
+                { icon: "fab fa-linkedin", href: "https://www.linkedin.com/in/anjani-dedeepya-siripurapu-a2a202281/", name: "LinkedIn" },
               ].map((social, index) => (
                 <motion.a
                   key={index}
