@@ -106,16 +106,10 @@ export default function Skills() {
               <div className="space-y-6">
                 {category.skills.map((skill) => (
                   <div key={skill.name}>
-                    <div className="flex justify-between mb-2">
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className={`w-3 h-3 rounded-full ${skill.color}`}></span>
                       <span>{skill.name}</span>
-                      <span>{skill.level}%</span>
                     </div>
-                    <motion.div
-                      initial={{ width: 0 }}
-                      animate={isInView ? { width: `${skill.level}%` } : { width: 0 }}
-                      transition={{ duration: 1, delay: 0.4 + index * 0.1 }}
-                      className={`h-2 rounded-full ${skill.color}`}
-                    />
                   </div>
                 ))}
               </div>

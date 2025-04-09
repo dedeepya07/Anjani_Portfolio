@@ -28,7 +28,7 @@ const projects: Project[] = [
     image: "https://images.unsplash.com/photo-1563089145-599997674d42?q=80&w=2070&auto=format&fit=crop",
     tags: ["Python", "Random Forest", "XGBoost", "Flask"],
     githubUrl: "https://github.com",
-    liveUrl: "https://example.com",
+    liveUrl: "",
   },
   {
     id: 2,
@@ -38,7 +38,7 @@ const projects: Project[] = [
     image: "https://images.unsplash.com/photo-1589578527966-fdac0f44566c?q=80&w=1974&auto=format&fit=crop",
     tags: ["AI", "Blockchain", "React", "NLP"],
     githubUrl: "https://github.com",
-    liveUrl: "https://example.com",
+    liveUrl: "https://insaaf-legal.netlify.app",
   },
   {
     id: 3,
@@ -48,7 +48,7 @@ const projects: Project[] = [
     image: "https://images.unsplash.com/photo-1617575408723-aec51ae36b1d?q=80&w=1964&auto=format&fit=crop",
     tags: ["NLP", "NLTK", "Python", "Geocoding"],
     githubUrl: "https://github.com",
-    liveUrl: "https://example.com",
+    liveUrl: "",
   },
   {
     id: 4,
@@ -58,37 +58,27 @@ const projects: Project[] = [
     image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=2070&auto=format&fit=crop",
     tags: ["Data Analysis", "Financial Modeling", "Visualization", "React"],
     githubUrl: "https://github.com",
-    liveUrl: "https://example.com",
+    liveUrl: "",
   },
   {
     id: 5,
-    title: "Smart City IoT Project",
-    description: "An innovative IoT system featuring automated smart street lights, solar-powered EV charging stations, GPS-based bus tracking, and stormwater detection to alert authorities during high water levels.",
-    category: ["iot", "data"],
-    image: "https://images.unsplash.com/photo-1638272181967-7d3772a91265?q=80&w=2070&auto=format&fit=crop",
-    tags: ["IoT", "Solar Energy", "GPS", "Sensors"],
-    githubUrl: "https://github.com",
-    liveUrl: "https://example.com",
-  },
-  {
-    id: 6,
     title: "Mental Health Prediction",
     description: "A mental health assessment tool utilizing the DASS-42 questionnaire to identify risk factors and predict potential issues. Features a user-friendly interface providing personalized suggestions.",
     category: ["ml", "data", "web"],
     image: "https://images.unsplash.com/photo-1582719471384-894fbb16e074?q=80&w=2187&auto=format&fit=crop",
     tags: ["Machine Learning", "Psychology", "Data Analysis", "Web App"],
     githubUrl: "https://github.com",
-    liveUrl: "https://example.com",
+    liveUrl: "",
   },
   {
-    id: 7,
+    id: 6,
     title: "WISER: Women's Health Screening",
     description: "A women's health tool leveraging health indicators to assess early menopause risk. Uses unsupervised learning with Hierarchical Clustering and Gaussian Mixture Models for 95% accuracy in risk profiling.",
     category: ["ml", "data"],
     image: "https://images.unsplash.com/photo-1631815587646-b85a1bb027e3?q=80&w=2069&auto=format&fit=crop",
     tags: ["Unsupervised Learning", "Healthcare", "GMM", "Visualization"],
     githubUrl: "https://github.com",
-    liveUrl: "https://example.com",
+    liveUrl: "",
   },
 ];
 
@@ -200,15 +190,17 @@ export default function Projects() {
                     <Button variant="outline" size="sm" asChild>
                       <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                         <Github className="mr-2 h-4 w-4" />
-                        Code
+                        GitHub
                       </a>
                     </Button>
-                    <Button size="sm" asChild>
-                      <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink className="mr-2 h-4 w-4" />
-                        Live Demo
-                      </a>
-                    </Button>
+                    {project.liveUrl && (
+                      <Button size="sm" asChild>
+                        <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                          <ExternalLink className="mr-2 h-4 w-4" />
+                          Live Demo
+                        </a>
+                      </Button>
+                    )}
                   </CardFooter>
                 </Card>
               </motion.div>
