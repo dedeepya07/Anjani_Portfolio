@@ -2,58 +2,63 @@ import { Card, CardContent } from "@/components/ui/card";
 import { AlertCircle, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import { ScaleTransition } from "@/components/ui/page-transition";
+import { Perspective3DTransition } from "@/components/ui/animated-page-transitions";
+import { StaggeredScrollAnimation, StaggerItem } from "@/components/ui/scroll-animation";
 
 export default function NotFound() {
-  return (
-    <ScaleTransition>
-      <div className="min-h-screen w-full flex flex-col items-center justify-center bg-background">
-        <motion.div
-          initial={{ scale: 0.9, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.5, type: "spring" }}
-        >
-          <Card className="w-full max-w-md mx-4 border-primary/10 shadow-lg">
-            <CardContent className="pt-6 pb-4">
-              <div className="flex flex-col items-center mb-6 text-center">
-                <motion.div
-                  initial={{ scale: 0.8, opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
-                  transition={{ delay: 0.2, duration: 0.4 }}
-                >
-                  <AlertCircle className="h-16 w-16 text-primary mb-4" />
-                </motion.div>
-                <h1 className="text-3xl font-bold mb-2">404</h1>
-                <p className="text-xl font-medium text-muted-foreground">Page Not Found</p>
-              </div>
+  const [location] = useLocation();
 
-              <motion.p 
-                className="mt-4 text-center text-muted-foreground mb-6"
-                initial={{ y: 20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.3, duration: 0.4 }}
-              >
-                The page you are looking for doesn't exist or has been moved.
-              </motion.p>
-              
-              <motion.div
-                className="flex justify-center"
-                initial={{ y: 20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.4, duration: 0.4 }}
-              >
-                <Link href="/">
-                  <Button className="group">
-                    <ArrowLeft className="mr-2 h-4 w-4 transition-transform group-hover:-translate-x-1" />
-                    Back to Home
-                  </Button>
-                </Link>
-              </motion.div>
-            </CardContent>
-          </Card>
-        </motion.div>
+  return (
+    <Perspective3DTransition location={location} duration={0.8}>
+      <div className="min-h-screen w-full flex flex-col items-center justify-center bg-background">
+        <StaggeredScrollAnimation 
+          direction="scale" 
+          delayChildren={0.1} 
+          staggerChildren={0.1} 
+          threshold={0}
+          once={false}
+          className="w-full max-w-md mx-4"
+        >
+          <StaggerItem direction="scale">
+            <Card className="w-full border-primary/10 shadow-lg">
+              <CardContent className="pt-6 pb-4">
+                <div className="flex flex-col items-center mb-6 text-center">
+                  <StaggerItem direction="rotate">
+                    <AlertCircle className="h-16 w-16 text-primary mb-4" />
+                  </StaggerItem>
+                  
+                  <StaggerItem direction="up">
+                    <h1 className="text-3xl font-bold mb-2">404</h1>
+                  </StaggerItem>
+                  
+                  <StaggerItem direction="up">
+                    <p className="text-xl font-medium text-muted-foreground">Page Not Found</p>
+                  </StaggerItem>
+                </div>
+
+                <StaggerItem direction="fadeIn">
+                  <p className="mt-4 text-center text-muted-foreground mb-6">
+                    The page you are looking for doesn't exist or has been moved.
+                  </p>
+                </StaggerItem>
+                
+                <StaggerItem direction="up">
+                  <div className="flex justify-center">
+                    <Link href="/">
+                      <Button className="group">
+                        <ArrowLeft className="mr-2 h-4 w-4 transition-transform group-hover:-translate-x-1" />
+                        Back to Home
+                      </Button>
+                    </Link>
+                  </div>
+                </StaggerItem>
+              </CardContent>
+            </Card>
+          </StaggerItem>
+        </StaggeredScrollAnimation>
       </div>
-    </ScaleTransition>
+    </Perspective3DTransition>
   );
 }

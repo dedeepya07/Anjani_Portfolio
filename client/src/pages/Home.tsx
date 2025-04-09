@@ -13,6 +13,7 @@ import ScrollProgress from "@/components/ScrollProgress";
 import SectionIndicator from "@/components/SectionIndicator";
 import { SectionTransition } from "@/components/ui/section-transition";
 import { useScroll } from "@/hooks/use-scroll";
+import { ScrollAnimation, StaggeredScrollAnimation, StaggerItem } from "@/components/ui/scroll-animation";
 
 export default function Home() {
   const { scrollY } = useScroll();
@@ -27,41 +28,91 @@ export default function Home() {
     >
       <ScrollProgress />
       <SectionIndicator />
-      <Navbar />
+      
+      {/* Animated floating navigation */}
+      <ScrollAnimation 
+        direction="fadeIn" 
+        duration={0.7} 
+        delay={0.2} 
+        threshold={0}
+        className="sticky top-0 z-50"
+      >
+        <Navbar />
+      </ScrollAnimation>
+      
       <main>
-        <SectionTransition id="home">
-          <Hero />
-        </SectionTransition>
+        {/* Hero Section - Special entrances effect */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
+          <SectionTransition id="home">
+            <Hero />
+          </SectionTransition>
+        </motion.div>
         
-        <SectionTransition id="about">
-          <About />
-        </SectionTransition>
+        {/* About Section - Slide from bottom with slight delay */}
+        <ScrollAnimation direction="up" duration={0.7} threshold={0.1}>
+          <SectionTransition id="about">
+            <About />
+          </SectionTransition>
+        </ScrollAnimation>
         
-        <SectionTransition id="projects">
-          <Projects />
-        </SectionTransition>
+        {/* Projects Section - Scale in animation */}
+        <ScrollAnimation direction="scale" duration={0.8} threshold={0.1}>
+          <SectionTransition id="projects">
+            <Projects />
+          </SectionTransition>
+        </ScrollAnimation>
         
-        <SectionTransition id="skills">
-          <Skills />
-        </SectionTransition>
+        {/* Skills Section - Scale up animation */}
+        <ScrollAnimation direction="up" duration={0.7} threshold={0.1}>
+          <SectionTransition id="skills">
+            <Skills />
+          </SectionTransition>
+        </ScrollAnimation>
         
-        <SectionTransition id="experience">
-          <Timeline />
-        </SectionTransition>
+        {/* Experience Section - Slide from side */}
+        <ScrollAnimation direction="left" duration={0.7} threshold={0.1}>
+          <SectionTransition id="experience">
+            <Timeline />
+          </SectionTransition>
+        </ScrollAnimation>
         
-        <SectionTransition id="achievements">
-          <Achievements />
-        </SectionTransition>
+        {/* Achievements Section - Slight rotate appearance */}
+        <ScrollAnimation direction="rotate" duration={0.8} threshold={0.1}>
+          <SectionTransition id="achievements">
+            <Achievements />
+          </SectionTransition>
+        </ScrollAnimation>
         
-        <SectionTransition id="certifications">
-          <Certifications />
-        </SectionTransition>
+        {/* Certifications Section - Slide from right */}
+        <ScrollAnimation direction="right" duration={0.7} threshold={0.1}>
+          <SectionTransition id="certifications">
+            <Certifications />
+          </SectionTransition>
+        </ScrollAnimation>
         
-        <SectionTransition id="contact">
-          <Contact />
-        </SectionTransition>
+        {/* Contact Section - Fade in animation */}
+        <ScrollAnimation direction="fadeIn" duration={0.8} threshold={0.1}>
+          <SectionTransition id="contact">
+            <Contact />
+          </SectionTransition>
+        </ScrollAnimation>
       </main>
-      <Footer />
+      
+      {/* Footer with staggered children for a wave effect */}
+      <StaggeredScrollAnimation 
+        direction="up" 
+        delayChildren={0.2} 
+        staggerChildren={0.1}
+        threshold={0.1}
+      >
+        <StaggerItem>
+          <Footer />
+        </StaggerItem>
+      </StaggeredScrollAnimation>
     </motion.div>
   );
 }
