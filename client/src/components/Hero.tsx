@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { useRef } from "react";
 import { ArrowDown, FileDown } from "lucide-react";
-import profileImage from "@/assets/profile.svg";
+import profileImage from "@/assets/anjani_photo.jpeg";
 
 export default function Hero() {
   const scrollRef = useRef<HTMLDivElement>(null);

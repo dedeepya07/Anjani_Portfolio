@@ -5,6 +5,9 @@ import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Github } from "lucide-react";
+import dataScienceImg from "@/assets/data_science.svg";
+import postalServiceImg from "@/assets/postal_service.svg";
+import womensHealthImg from "@/assets/womens_health.svg";
 
 type ProjectCategory = "all" | "ml" | "web" | "data" | "nlp" | "iot";
 
@@ -25,7 +28,7 @@ const projects: Project[] = [
     title: "Brain Stroke Prediction",
     description: "A machine learning model that predicts brain stroke risks using parameters like age, sex, BMI, and blood sugar, with an interactive web interface for personalized health recommendations.",
     category: ["ml", "web", "data"],
-    image: "https://images.unsplash.com/photo-1581595219315-a187dd40c322?q=80&w=1974&auto=format&fit=crop",
+    image: dataScienceImg,
     tags: ["Python", "Random Forest", "XGBoost", "Flask"],
     githubUrl: "https://github.com/dedeepya07/Brain-Stroke-Prediction-using-ML-Models",
     liveUrl: "",
@@ -55,7 +58,7 @@ const projects: Project[] = [
     title: "POSTFIX",
     description: "NLP-based application that addresses incomplete delivery and missing address details. Uses NLTK for parsing and resolving address-related issues in real-time to enhance logistics efficiency.",
     category: ["nlp", "data"],
-    image: "https://images.unsplash.com/photo-1614177609973-cb2eab8d8ef2?q=80&w=1974&auto=format&fit=crop",
+    image: postalServiceImg,
     tags: ["NLP", "NLTK", "Python", "Geocoding"],
     githubUrl: "https://github.com/dedeepya07/POSTFIX",
     liveUrl: "https://youtu.be/vOiTeDGuuhQ?si=SUPHItiyqmcF-rJt",
@@ -85,7 +88,7 @@ const projects: Project[] = [
     title: "WISER: Women's Health Screening",
     description: "A women's health tool leveraging health indicators to assess early menopause risk. Uses unsupervised learning with Hierarchical Clustering and Gaussian Mixture Models for 95% accuracy in risk profiling.",
     category: ["ml", "data"],
-    image: "https://images.unsplash.com/photo-1628921919890-edee424ce317?q=80&w=2070&auto=format&fit=crop",
+    image: womensHealthImg,
     tags: ["Unsupervised Learning", "Healthcare", "GMM", "Visualization"],
     githubUrl: "https://colab.research.google.com/drive/1LguGEomj04bML8s_DxYz0BmB8ylm7Ugc?usp=sharing",
     liveUrl: "",

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" fill="none">
+  <rect width="800" height="600" fill="#F9FAFB"/>
+  
+  <!-- Background Elements -->
+  <circle cx="400" cy="300" r="200" fill="#EC4899" opacity="0.05"/>
+  <circle cx="400" cy="300" r="150" fill="#EC4899" opacity="0.1"/>
+  <circle cx="400" cy="300" r="100" fill="#EC4899" opacity="0.15"/>
+  
+  <!-- Female Symbol -->
+  <circle cx="400" cy="250" r="70" stroke="#EC4899" stroke-width="8" fill="none"/>
+  <line x1="400" y1="320" x2="400" y2="400" stroke="#EC4899" stroke-width="8"/>
+  <line x1="360" y1="360" x2="440" y2="360" stroke="#EC4899" stroke-width="8"/>
+  
+  <!-- Decorative Elements -->
+  <circle cx="250" cy="180" r="30" fill="#EC4899" opacity="0.2"/>
+  <circle cx="550" cy="180" r="30" fill="#EC4899" opacity="0.2"/>
+  <circle cx="250" cy="420" r="30" fill="#EC4899" opacity="0.2"/>
+  <circle cx="550" cy="420" r="30" fill="#EC4899" opacity="0.2"/>
+  
+  <!-- Calendar Icons -->
+  <rect x="170" y="240" width="60" height="60" rx="5" fill="white" stroke="#EC4899" stroke-width="2"/>
+  <rect x="170" y="240" width="60" height="15" rx="2" fill="#EC4899" opacity="0.8"/>
+  <line x1="185" y1="265" x2="185" y2="290" stroke="#EC4899" stroke-width="1"/>
+  <line x1="200" y1="265" x2="200" y2="290" stroke="#EC4899" stroke-width="1"/>
+  <line x1="215" y1="265" x2="215" y2="290" stroke="#EC4899" stroke-width="1"/>
+  
+  <rect x="570" y="240" width="60" height="60" rx="5" fill="white" stroke="#EC4899" stroke-width="2"/>
+  <rect x="570" y="240" width="60" height="15" rx="2" fill="#EC4899" opacity="0.8"/>
+  <line x1="585" y1="265" x2="585" y2="290" stroke="#EC4899" stroke-width="1"/>
+  <line x1="600" y1="265" x2="600" y2="290" stroke="#EC4899" stroke-width="1"/>
+  <line x1="615" y1="265" x2="615" y2="290" stroke="#EC4899" stroke-width="1"/>
+  
+  <!-- Health Icons -->
+  <circle cx="180" cy="350" r="20" fill="none" stroke="#EC4899" stroke-width="2"/>
+  <circle cx="180" cy="350" r="15" fill="#EC4899" opacity="0.3"/>
+  <line x1="170" y1="350" x2="190" y2="350" stroke="#EC4899" stroke-width="2"/>
+  <line x1="180" y1="340" x2="180" y2="360" stroke="#EC4899" stroke-width="2"/>
+  
+  <circle cx="220" cy="350" r="20" fill="none" stroke="#EC4899" stroke-width="2"/>
+  <path d="M210 350C210 345 215 340 220 340C225 340 230 345 230 350C230 355 225 360 220 360" stroke="#EC4899" stroke-width="2" fill="none"/>
+  <line x1="220" y1="360" x2="220" y2="370" stroke="#EC4899" stroke-width="2"/>
+  
+  <!-- Hearts -->
+  <path d="M580 340C580 335 585 330 590 330C595 330 600 335 600 340C600 350 590 355 580 365C570 355 560 350 560 340C560 335 565 330 570 330C575 330 580 335 580 340Z" fill="#EC4899" opacity="0.6"/>
+  <path d="M620 360C620 355 625 350 630 350C635 350 640 355 640 360C640 370 630 375 620 385C610 375 600 370 600 360C600 355 605 350 610 350C615 350 620 355 620 360Z" fill="#EC4899" opacity="0.4"/>
+  
+  <!-- Text Label -->
+  <rect x="300" y="480" width="200" height="40" rx="20" fill="#EC4899" opacity="0.8"/>
+  <text x="400" y="505" text-anchor="middle" font-family="Arial" font-size="16" fill="white">WISER</text>
+</svg>

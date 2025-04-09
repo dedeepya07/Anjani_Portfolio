@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" fill="none">
+  <rect width="800" height="600" fill="#F9FAFB"/>
+  
+  <!-- Background Elements -->
+  <rect x="100" y="150" width="600" height="300" rx="10" fill="#3B82F6" opacity="0.1"/>
+  
+  <!-- Postal Box/Mailbox -->
+  <rect x="250" y="200" width="300" height="200" rx="8" fill="#3B82F6" opacity="0.8"/>
+  <rect x="250" y="200" width="300" height="50" rx="8" fill="#3B82F6"/>
+  <rect x="270" y="225" width="260" height="150" rx="4" fill="white" opacity="0.9"/>
+  
+  <!-- Mail Slot -->
+  <rect x="350" y="210" width="100" height="10" rx="5" fill="#111827"/>
+  
+  <!-- Letters and Envelopes -->
+  <rect x="290" y="240" width="80" height="50" rx="2" fill="#E5E7EB" stroke="#9CA3AF" stroke-width="1"/>
+  <path d="M290 240L330 270L370 240" stroke="#9CA3AF" stroke-width="1"/>
+  
+  <rect x="290" y="300" width="80" height="50" rx="2" fill="#E5E7EB" stroke="#9CA3AF" stroke-width="1" transform="rotate(-5 290 300)"/>
+  <path d="M290 300L330 330L370 300" stroke="#9CA3AF" stroke-width="1" transform="rotate(-5 290 300)"/>
+  
+  <rect x="380" y="260" width="80" height="50" rx="2" fill="#E5E7EB" stroke="#9CA3AF" stroke-width="1" transform="rotate(8 380 260)"/>
+  <path d="M380 260L420 290L460 260" stroke="#9CA3AF" stroke-width="1" transform="rotate(8 380 260)"/>
+  
+  <rect x="380" y="320" width="80" height="50" rx="2" fill="#E5E7EB" stroke="#9CA3AF" stroke-width="1"/>
+  <path d="M380 320L420 350L460 320" stroke="#9CA3AF" stroke-width="1"/>
+  
+  <!-- Postal Marks and Icons -->
+  <circle cx="450" cy="340" r="10" fill="#EF4444" opacity="0.8"/>
+  <circle cx="310" cy="260" r="8" fill="#3B82F6" opacity="0.8"/>
+  <rect x="440" y="280" width="20" height="20" rx="2" fill="#10B981" opacity="0.8"/>
+  
+  <!-- Address Lines -->
+  <rect x="310" y="325" width="40" height="2" rx="1" fill="#6B7280"/>
+  <rect x="310" y="330" width="30" height="2" rx="1" fill="#6B7280"/>
+  <rect x="310" y="335" width="35" height="2" rx="1" fill="#6B7280"/>
+  
+  <rect x="400" y="345" width="40" height="2" rx="1" fill="#6B7280"/>
+  <rect x="400" y="350" width="30" height="2" rx="1" fill="#6B7280"/>
+  <rect x="400" y="355" width="35" height="2" rx="1" fill="#6B7280"/>
+  
+  <!-- Postal Code -->
+  <rect x="310" y="265" width="15" height="2" rx="1" fill="#6B7280"/>
+  <rect x="330" y="265" width="15" height="2" rx="1" fill="#6B7280"/>
+  <rect x="350" y="265" width="15" height="2" rx="1" fill="#6B7280"/>
+  
+  <!-- Stamp -->
+  <rect x="430" y="245" width="20" height="25" rx="2" fill="#F59E0B" opacity="0.7"/>
+  <rect x="433" y="248" width="14" height="19" rx="1" fill="#F9FAFB" opacity="0.8"/>
+  <circle cx="440" cy="257" r="5" fill="#F59E0B" opacity="0.4"/>
+  
+  <!-- Post Office Label -->
+  <rect x="300" y="420" width="200" height="40" rx="5" fill="#3B82F6" opacity="0.9"/>
+  <text x="400" y="445" text-anchor="middle" font-family="Arial" font-size="16" fill="white">POSTFIX</text>
+</svg>
