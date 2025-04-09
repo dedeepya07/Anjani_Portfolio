@@ -42,6 +42,16 @@ const projects: Project[] = [
   },
   {
     id: 3,
+    title: "YouTube Trend Analysis",
+    description: "A data analysis project examining YouTube trending videos across different regions. Identifies patterns in content performance and provides insights on optimal posting strategies for content creators.",
+    category: ["data", "web"],
+    image: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=2674&auto=format&fit=crop",
+    tags: ["Data Analysis", "Python", "Visualization", "Pandas"],
+    githubUrl: "https://github.com",
+    liveUrl: "https://youtubetrends-analysis.netlify.app",
+  },
+  {
+    id: 4,
     title: "POSTFIX",
     description: "NLP-based application that addresses incomplete delivery and missing address details. Uses NLTK for parsing and resolving address-related issues in real-time to enhance logistics efficiency.",
     category: ["nlp", "data"],
@@ -51,7 +61,7 @@ const projects: Project[] = [
     liveUrl: "",
   },
   {
-    id: 4,
+    id: 5,
     title: "NAV Analysis",
     description: "A financial analysis system that updates stock market data daily, displays trends using line graphs, and ranks funds based on Sharpe Ratio and NAV. Includes a SIP calculator for investment planning.",
     category: ["data", "web"],
@@ -61,7 +71,7 @@ const projects: Project[] = [
     liveUrl: "",
   },
   {
-    id: 5,
+    id: 6,
     title: "Mental Health Prediction",
     description: "A mental health assessment tool utilizing the DASS-42 questionnaire to identify risk factors and predict potential issues. Features a user-friendly interface providing personalized suggestions.",
     category: ["ml", "data", "web"],
@@ -71,7 +81,7 @@ const projects: Project[] = [
     liveUrl: "",
   },
   {
-    id: 6,
+    id: 7,
     title: "WISER: Women's Health Screening",
     description: "A women's health tool leveraging health indicators to assess early menopause risk. Uses unsupervised learning with Hierarchical Clustering and Gaussian Mixture Models for 95% accuracy in risk profiling.",
     category: ["ml", "data"],

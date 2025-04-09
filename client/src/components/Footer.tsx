@@ -26,22 +26,20 @@ export default function Footer() {
             
             <div className="mt-6 flex gap-4">
               {[
-                { icon: "fab fa-github", href: "https://github.com" },
-                { icon: "fab fa-linkedin", href: "https://linkedin.com" },
-                { icon: "fab fa-twitter", href: "https://twitter.com" },
-                { icon: "fab fa-instagram", href: "https://instagram.com" },
-                { icon: "fab fa-dribbble", href: "https://dribbble.com" },
+                { icon: "fab fa-github", href: "https://github.com", name: "GitHub" },
+                { icon: "fab fa-linkedin", href: "https://linkedin.com", name: "LinkedIn" },
               ].map((social, index) => (
                 <motion.a
                   key={index}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 rounded-full hover:text-primary transition-colors"
+                  className="p-3 rounded-full hover:text-primary hover:bg-primary/10 transition-colors flex items-center gap-2"
                   whileHover={{ y: -5 }}
                   whileTap={{ scale: 0.95 }}
                 >
                   <i className={`${social.icon} text-lg`}></i>
+                  <span className="text-sm font-medium">{social.name}</span>
                 </motion.a>
               ))}
             </div>

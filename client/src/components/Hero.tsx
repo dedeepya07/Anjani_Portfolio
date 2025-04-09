@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { useRef } from "react";
 import { ArrowDown, FileUp } from "lucide-react";
+import profileImage from "@/assets/profile.svg";
 
 export default function Hero() {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -64,7 +65,7 @@ export default function Hero() {
       >
         <motion.div className="mb-6 inline-block" variants={itemVariants}>
           <img 
-            src="https://images.unsplash.com/photo-1534751516642-a1af1ef26a56?q=80&w=1889&auto=format&fit=crop" 
+            src={profileImage} 
             alt="Professional headshot" 
             className="rounded-full w-32 h-32 md:w-40 md:h-40 object-cover mx-auto border-4 border-primary/20"
           />
